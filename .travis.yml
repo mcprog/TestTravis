@@ -2,4 +2,8 @@ language: java
 jdk:
   - oraclejdk8
 script: ant build
-
+mvn sonar:sonar \
+  -Dsonar.projectKey=mcprog_TestTravis \
+  -Dsonar.organization=mcprog-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=31ff7773382831f6921d24a7821a009dfc3e9c73
